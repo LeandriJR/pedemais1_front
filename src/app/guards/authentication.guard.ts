@@ -31,6 +31,7 @@ export class AuthenticationGuard {
     }
   }
 
+  
   canActivate(): Observable<boolean> | Promise<boolean> | boolean {
     return this.verificacaoLogin();
   }
