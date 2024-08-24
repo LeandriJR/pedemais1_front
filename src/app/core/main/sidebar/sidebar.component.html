@@ -1,0 +1,35 @@
+<ul class="nav flex-column">
+  <ng-template #recursiveList let-dad>
+    @for(item of dad; track item.path) {
+      <li
+        >
+        
+        @if(item?.filhos?.length === 0) {
+          <a class="nav-link" [routerLink]="item.path" routerLinkActive="active">
+            <div class="d-flex align-items-center justify-content-center">
+              <img [src]="item.img" width="25" alt="" />
+            </div>
+            <span class="nav-text">{{ item.texto }}</span>
+          </a>
+        }
+        @if(item?.filhos?.length > 0) {
+          <a class="nav-link dropdown-toggle" (click)="toggleDrop($event, item, dad)" href="#" data-bs-toggle="dropdown">
+            <div class="d-flex align-items-center justify-content-center">
+              <img [src]="item.img" width="25" alt="" />
+            </div>
+            <span class="nav-text font-weight-semibold">{{ item.texto }}</span>
+          </a>
+        }
+        @if(item?.filhos?.length > 0) {
+          <ul class="dropdown-menu">
+            <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: item.filhos }"></ng-container>
+          </ul>
+        }
+      </li>
+    }
+    
+  </ng-template>
+
+  <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: data }"></ng-container>
+</ul>
+

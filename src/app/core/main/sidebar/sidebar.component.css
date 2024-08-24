@@ -1,0 +1,258 @@
+::ng-deep .c-sidebar-nav {
+    border-right: 2px solid #ddd;
+  }
+
+  ::ng-deep .c-sidebar .c-sidebar-nav-link:hover {
+    background: var(--white-secondary-hover);
+    color: var(--texto);
+  }
+
+  ::ng-deep .c-sidebar .c-sidebar-nav-link:hover .c-sidebar-nav-icon {
+    color: var(--texto);
+  }
+
+  ::ng-deep .c-sidebar .c-sidebar-nav-link.c-active {
+    color: var(--danger-hover);
+  }
+
+  ::ng-deep .c-sidebar .c-sidebar-nav-link.c-active .c-sidebar-nav-icon {
+    color: var(--danger-hover);
+  }
+
+  ::ng-deep .c-sidebar .c-sidebar-nav-link {
+    color: var(--texto);
+  }
+
+  ::ng-deep .c-sidebar .c-sidebar-nav-link .c-sidebar-nav-icon {
+    color: var(--texto);
+  }
+
+  ::ng-deep .c-sidebar-nav-title {
+    color: var(--texto) !important;
+  }
+
+  ::ng-deep .c-sidebar-nav-item .c-sidebar-nav-link {
+    color: var(--texto)!important;
+  }
+
+  ::ng-deep .c-sidebar-nav-dropdown-toggle {
+    color: var(--texto);
+  }
+
+  ::ng-deep .c-sidebar .c-sidebar-nav-dropdown-toggle .c-sidebar-nav-icon {
+    color: var(--texto);
+  }
+
+  ::ng-deep .c-sidebar {
+    margin-top: 55px !important;
+  }
+
+  ::ng-deep .c-sidebar .c-sidebar-nav-dropdown {
+    background: none !important;
+  }
+
+  @media (hover: hover), not all {
+    ::ng-deep .c-sidebar .c-sidebar-nav-dropdown-toggle:hover {
+      background: var(--white-secondary-hover);
+    }
+    ::ng-deep .c-sidebar .c-sidebar-nav-dropdown-toggle:hover .c-sidebar-nav-icon {
+      color: var(--texto);
+    }
+  }
+
+  ::ng-deep .c-sidebar .c-sidebar-nav-dropdown .c-sidebar-nav-dropdown-toggle {
+    color: var(--texto) !important;
+  }
+
+  ::ng-deep .c-sidebar-nav-dropdown-toggle::after {
+    color: var(--texto) !important;
+  }
+
+  ::ng-deep .c-sidebar-nav-dropdown.c-show {
+    background: var(--white-secondary-hover) !important;
+  }
+
+  ::ng-deep .c-sidebar-nav-dropdown.c-show .c-sidebar-nav-dropdown-items {
+    background: var(--white-secondary-hover)!important;
+  }
+
+  ::ng-deep .c-sidebar .c-sidebar-nav-dropdown-toggle::after {
+    background-image: url("../../../../assets/img/setas/icon_seta.svg") !important;
+  }
+
+  ::ng-deep .c-sidebar-nav-link:hover .nav-text::after, .c-sidebar-nav-dropdown-toggle:hover .nav-text::after {
+    width: 80%;
+  }
+
+  ::ng-deep .c-sidebar {
+    width: 250px;
+  }
+
+  @media ( min-width: 1000px) {
+    ::ng-deep html:not([dir=rtl]) .c-sidebar.c-sidebar-lg-show:not(.c-sidebar-right).c-sidebar-fixed~.c-wrapper, html:not([dir=rtl]) .c-sidebar.c-sidebar-show:not(.c-sidebar-right).c-sidebar-fixed~.c-wrapper {
+      margin-left: 250px;
+    }
+    ::ng-deep .sidebar-fixed .app-header+.app-body .sidebar {
+      height: calc(100vh - 55px);
+    }
+    ::ng-deep .sidebar-off-canvas .app-header+.app-body .sidebar {
+      height: calc(100vh - 55px);
+    }
+    ::ng-deep .aside-menu-fixed .app-header+.app-body .aside-menu {
+      height: calc(100vh - 55px);
+    }
+    ::ng-deep .aside-menu-off-canvas .app-header+.app-body .aside-menu {
+      height: calc(100vh - 55px);
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    ::ng-deep .sidebar {
+      position: fixed;
+      z-index: 1019;
+      width: 200px;
+      height: calc(100vh - 55px);
+    }
+    ::ng-deep .sidebar-minimizer {
+      display: none;
+    }
+  }
+
+  ::ng-deep .nav-text {
+    position: relative;
+  }
+
+  ::ng-deep .nav-text::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    transition: all .4s;
+    background: var(--danger);
+    bottom: 0;
+    left: 0;
+  }
+
+  ::ng-deep .sidebar-nav {
+    transition: width 0.25s;
+  }
+
+  ::ng-deep .ps {
+    overflow: hidden !important;
+    -ms-touch-action: auto;
+    touch-action: auto;
+    -ms-overflow-style: none;
+    overflow-anchor: none;
+  }
+
+  ::ng-deep .ps__rail-x {
+    position: absolute;
+    bottom: 0;
+    display: none;
+    height: 15px;
+    opacity: 0;
+    transition: background-color .2s linear, opacity .2s linear;
+  }
+
+  ::ng-deep .ps__rail-y {
+    position: absolute;
+    right: 0;
+    display: none;
+    width: 15px;
+    opacity: 0;
+    transition: background-color .2s linear, opacity .2s linear;
+  }
+
+  ::ng-deep .ps--active-x>.ps__rail-x, ::ng-deep .ps--active-y>.ps__rail-y {
+    display: block;
+  }
+
+  ::ng-deep .ps:hover>.ps__rail-x, ::ng-deep .ps:hover>.ps__rail-y, ::ng-deep .ps--focus>.ps__rail-x, ::ng-deep .ps--focus>.ps__rail-y, ::ng-deep .ps--scrolling-x>.ps__rail-x, ::ng-deep .ps--scrolling-y>.ps__rail-y {
+    opacity: .6;
+  }
+
+  ::ng-deep .ps__rail-x:hover, ::ng-deep .ps__rail-y:hover, ::ng-deep .ps__rail-x:focus, ::ng-deep .ps__rail-y:focus {
+    opacity: .9;
+  }
+
+  /*
+ * Scrollbar thumb styles
+ */
+
+  ::ng-deep .ps__thumb-x {
+    position: absolute;
+    bottom: 2px;
+    height: 6px;
+    border-radius: 6px;
+    transition: background-color .2s linear, height .2s ease-in-out;
+  }
+
+  ::ng-deep .ps__thumb-y {
+    position: absolute;
+    right: 2px;
+    width: 6px;
+    border-radius: 6px;
+    transition: background-color .2s linear, width .2s ease-in-out;
+  }
+
+  ::ng-deep .ps__rail-x:hover>.ps__thumb-x, ::ng-deep .ps__rail-x:focus>.ps__thumb-x {
+    height: 11px;
+  }
+
+  ::ng-deep .ps__rail-y:hover>.ps__thumb-y, ::ng-deep .ps__rail-y:focus>.ps__thumb-y {
+    width: 11px;
+  }
+
+  @supports (-ms-overflow-style: none) {
+    ::ng-deep .ps {
+      overflow: auto !important;
+    }
+  }
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    ::ng-deep .ps {
+      overflow: auto !important;
+    }
+  }
+
+  @media (min-width: 576px) {
+    ::ng-deep html:not([dir="rtl"]) .sidebar-sm-show .sidebar {
+      margin-left: 0;
+    }
+    ::ng-deep html:not([dir="rtl"]) .sidebar-sm-show.sidebar-fixed .main, html:not([dir="rtl"]) .sidebar-sm-show.sidebar-fixed .app-footer {
+      margin-left: 200px;
+    }
+    ::ng-deep html:not([dir="rtl"]) .sidebar-sm-show.sidebar-fixed.sidebar-compact .main, html:not([dir="rtl"]) .sidebar-sm-show.sidebar-fixed.sidebar-compact .app-footer {
+      margin-left: 150px;
+    }
+    ::ng-deep html:not([dir="rtl"]) .sidebar-sm-show.sidebar-fixed.sidebar-minimized .main, html:not([dir="rtl"]) .sidebar-sm-show.sidebar-fixed.sidebar-minimized .app-footer {
+      margin-left: 50px;
+    }
+    ::ng-deep html:not([dir="rtl"]) .sidebar-sm-show.breadcrumb-fixed .breadcrumb {
+      left: 200px;
+    }
+    ::ng-deep html:not([dir="rtl"]) .sidebar-sm-show.breadcrumb-fixed.sidebar-compact .breadcrumb {
+      left: 150px;
+    }
+    ::ng-deep html:not([dir="rtl"]) .sidebar-sm-show.breadcrumb-fixed.sidebar-minimized .breadcrumb {
+      left: 50px;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    ::ng-deep .sidebar-show .main {
+      position: relative;
+    }
+    ::ng-deep .sidebar-show .main::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background: rgba(0, 0, 0, 0.7);
+      -webkit-animation: opacity 0.25s;
+      animation: opacity 0.25s;
+    }
+  }
